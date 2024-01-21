@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="monokai.css">
+    <title>Euorack Visuals - Monokai Dark</title>
+    <style>
+        #project-container .code-text, #project-container .comment {
+            font-size: 0.7em; /* Adjust this value as needed */
+        }
+        #project-container img.code-image {
+            width: auto; /* Adjust if you want to change image size */
+            height: auto; /* Adjust if you want to change image size */
+        }
+    </style>
+    <script>
+        function generateImagePaths() {
+            const basePath = "api/images/Θάλασσα_";
+            const imagePaths = [];
+            for (let i = 1; i <= 567; i++) {
+                imagePaths.push(basePath + i + ".png");
+            }
+            return imagePaths;
+        }
+
+        function displayRandomImage() {
+            const imageList = generateImagePaths();
+            const randomIndex = Math.floor(Math.random() * imageList.length);
+            const randomImagePath = imageList[randomIndex];
+            const imageNumber = randomImagePath.match(/Θάλασσα_(\d+)/)[1];
+
+            document.getElementById('randomImage').src = randomImagePath;
+            document.getElementById('randomImage').alt = "Horizon Image" + imageNumber;
+            document.getElementById('imageFilename').textContent = randomImagePath;
+            document.getElementById('imageNumberDisplay').textContent = "# " + imageNumber;
+        }
+
+        window.onload = displayRandomImage;
+    </script>
+</head>
+<body>
+    <div id="project-container">
+        <p class="comment">/* Project Description */</p>
+        <p class="code-text">
+            <span class="string">"Refresh page for new horizon. Signal Flow: Electric Grid -> HP3310A Function Generator -> DFAM Filter -> Eurorack Mult Module (x3) -> WMD Ultrafold (x2) -> <a href="http://danielmahal.com/" style="text-decoration: underline; color: inherit;">Mahal VGA Module (!!)</a> -> Computer Screen (forgot which one) -> Nikon D3300 -> GitHub -> You, the observer of new horizons."</span>
+        </p>
+        
+        <p class="comment">// Displaying Random Image</p>
+        <p class="code-text">
+            <span class="tag">&lt;img</span>
+            <span class="attribute">id=</span><span class="string">"randomImage"</span>
+            <span class="attribute">src=</span><span class="string" id="imageFilename">"placeholder.png"</span>
+            <span class="attribute">alt=</span><span class="string">"New Horizon"</span><span class="tag">&gt;</span>
+        </p>
+        <img id="randomImage" src="placeholder.png" alt="Project Image" class="code-image">
+
+        <!-- Element to display image number -->
+        <p id="imageNumberDisplay" class="code-text"></p>
+    </div>
+</body>
+</html>
