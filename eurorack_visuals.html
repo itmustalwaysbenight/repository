@@ -14,7 +14,7 @@
     </style>
     <script>
         function generateImagePaths() {
-            const basePath = "api/web/Θάλασσα_";
+            const basePath = "api/web/Thalassa_";
             const imagePaths = [];
             for (let i = 1; i <= 567; i++) {
                 imagePaths.push(basePath + i + ".jpg");
@@ -26,7 +26,7 @@
             const imageList = generateImagePaths();
             const randomIndex = Math.floor(Math.random() * imageList.length);
             const randomImagePath = imageList[randomIndex];
-            const imageNumber = randomImagePath.match(/Θάλασσα_(\d+)/)[1];
+            const imageNumber = randomImagePath.match(/Thalassa_(\d+)/)[1];
 
             document.getElementById('randomImage').src = randomImagePath;
             document.getElementById('randomImage').alt = "Horizon Image" + imageNumber;
