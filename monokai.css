@@ -1,0 +1,35 @@
+body {
+    background-color: #000000; /* Pitch black background */
+    color: #f8f8f2; /* Off-white text color typical in Monokai */
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    margin: 0;
+    padding: 20px;
+}
+
+.tag {
+    color: #f92672; /* Pink color for HTML tags */
+}
+
+.attribute {
+    color: #a6e22e; /* Green color for HTML attributes */
+}
+
+.string {
+    color: #e6db74; /* Yellow color for strings */
+}
+
+.comment {
+    color: #75715e; /* Grey color for comments */
+}
+
+/* Additional styling as needed */
+/* Existing styles */
+
+
+.code-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border: none;
+}

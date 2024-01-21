@@ -1,0 +1,68 @@
+body {
+    background-color: #fdf6e3; /* Base background color for Solarized Light */
+    color: #657b83; /* Base text color typical in Solarized Light */
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    margin: 0;
+    padding: 20px;
+}
+
+.tag {
+    color: #b58900; /* Yellow color for HTML tags */
+}
+
+.attribute {
+    color: #2aa198; /* Cyan color for HTML attributes */
+}
+
+.string {
+    color: #d33682; /* Magenta color for strings */
+}
+
+.comment {
+    color: #93a1a1; /* Grey color for comments */
+}
+
+/* Additional styling as needed */
+/* Existing styles */
+
+.code-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border: none;
+}
+.editor {
+    background-color: #fdf6e3;
+    color: #657b83;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    padding: 20px;
+    white-space: pre;
+    overflow-x: auto;
+}
+
+.editor .tag {
+    color: #b58900;
+}
+
+.editor .attribute {
+    color: #2aa198;
+}
+
+.editor .string {
+    color: #d33682;
+}
+
+.editor .comment {
+    color: #93a1a1;
+}
+.project-link:hover, .project-link:hover .string, .project-link:hover .attribute {
+    color: #2aa198; /* Teal color, often used for attributes in syntax highlighting */
+    text-decoration: none; /* Removing underline for a cleaner look */
+}
+.keyword {
+    color: #268bd2; /* Blue color for Python keywords */
+}
+.function {
+    color: #859900; /* Green color for functions or specific keywords */
+}
