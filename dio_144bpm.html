@@ -25,6 +25,19 @@
 <span class="comment"># Link back to the main portfolio</span>
 <span class="keyword">import</span> <span class="module">webbrowser</span>
 <a href="index.html" class="pseudo-link"><span class="module">webbrowser</span>.<span class="function">open</span>(<span class="string">'index.html'</span>)</a>
+
+<span class="comment"># Embedding an audio file</span>
+<span class="html-tag">&lt;audio</span> <span class="html-attribute">controls</span><span class="html-tag">&gt;</span>
+    <span class="html-tag">&lt;source</span> <span class="html-attribute">src</span>=<span class="string">"./audio/SINT.aif"</span> <span class="html-attribute">type</span>=<span class="string">"audio/aiff"</span><span class="html-tag">&gt;&lt;/source&gt;</span>
+<span class="html-tag">&lt;/audio&gt;</span>
+
+<div class="audio-player">
+    <audio controls>
+        <source src="audio/SINT.mp3" type="audio/mpeg">
+        
+        Your browser does not support the audio tag.
+    </audio>
+</div>
     </pre>
 </body>
 </html>
